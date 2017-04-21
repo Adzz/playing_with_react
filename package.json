@@ -21,13 +21,14 @@
     "css-loader": "0.26.1",
     "detect-port": "1.1.0",
     "dotenv": "2.0.0",
-    "eslint": "3.16.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
     "eslint-config-react-app": "^0.6.2",
     "eslint-loader": "1.6.0",
     "eslint-plugin-flowtype": "2.21.0",
-    "eslint-plugin-import": "2.0.1",
-    "eslint-plugin-jsx-a11y": "4.0.0",
-    "eslint-plugin-react": "6.4.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.10.0",
     "fs-extra": "0.30.0",
@@ -43,7 +44,6 @@
     "stylelint-config-suitcss": "^11.0.0",
     "stylelint-selector-bem-pattern": "^1.0.0",
     "stylelint-webpack-plugin": "^0.7.0",
-    "style-loader": "0.13.1",
     "url-loader": "0.5.7",
     "webpack": "1.14.0",
     "webpack-dev-server": "1.16.2",
@@ -54,7 +54,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "css-lint": "stylelint 'src/**/*.scss' --syntax scss --cache"
+    "css-lint": "stylelint 'src/**/*.scss' --syntax scss --cache",
+    "js-lint": "./node_modules/.bin/eslint 'src/' --ext .jsx,.js --color --fix --cache"
   },
   "jest": {
     "collectCoverageFrom": [

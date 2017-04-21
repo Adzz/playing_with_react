@@ -19,3 +19,4 @@ yarn-error.log*
 
 # linter
 .stylelintcache
+.eslintcache

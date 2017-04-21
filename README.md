@@ -8,7 +8,7 @@
 
 ## Js
 
-JavaScript/JSX/React is linted with [ES Lint](http://eslint.org/). We should aim to follow [Airbnb's styleguide](https://github.com/airbnb/javascript/tree/master/react) as we implement their [eslint config](https://www.npmjs.com/package/eslint-config-airbnb). Currently test files are excluded from linting, which doesn't mean you can go mad there, it's just we haven't had time to configure the linter for them. Feel free to have a crack.
+JavaScript/JSX/React is linted with [ES Lint](http://eslint.org/). We should aim to follow [Airbnb's styleguide](https://github.com/airbnb/javascript/tree/master/react) as we implement their [eslint config](https://www.npmjs.com/package/eslint-config-airbnb). We can add files to exclude form linting in the `.eslintignore`. The npm scrip `js-lint` runs with the `--fix` flag, which has a limited ability to fix some of the linting issues automatically.
 
 ### CSS
 
