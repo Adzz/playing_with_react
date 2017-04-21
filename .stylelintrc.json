@@ -1,0 +1,25 @@
+{
+  "plugins": [
+    "stylelint-selector-bem-pattern"
+  ],
+  "extends": "stylelint-config-suitcss",
+  "rules": {
+    "function-url-quotes": "always",
+    "no-invalid-double-slash-comments": true,
+    "selector-pseudo-element-colon-notation": "single",
+    "string-quotes": "single",
+    "color-hex-case": [ "lower", {
+      "message": "Lowercase letters are easier to distinguish from numbers"
+    }],
+    "shorthand-property-no-redundant-values": null,
+    "rule-non-nested-empty-line-before": null,
+    "plugin/selector-bem-pattern": {
+      "preset": "suit",
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-zA-Z0-9]+)?(?:--[a-zA-Z0-9]+)?(?:.is-[a-zA-Z0-9]+)?$"
+      },
+      "utilitySelectors": "^\\.u-[a-z]+$"
+    }
+  }
+}

@@ -40,6 +40,10 @@
     "promise": "7.1.1",
     "react-dev-utils": "^0.5.2",
     "style-loader": "0.13.1",
+    "stylelint-config-suitcss": "^11.0.0",
+    "stylelint-selector-bem-pattern": "^1.0.0",
+    "stylelint-webpack-plugin": "^0.7.0",
+    "style-loader": "0.13.1",
     "url-loader": "0.5.7",
     "webpack": "1.14.0",
     "webpack-dev-server": "1.16.2",
@@ -49,7 +53,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "css-lint": "stylelint 'src/**/*.scss' --syntax scss --cache"
   },
   "jest": {
     "collectCoverageFrom": [
