@@ -4,6 +4,10 @@
 
 ## Testing
 
+jest config is defined in package json under the `"jest": ` key.
+
+[check here](https://facebook.github.io/jest/docs/expect.html#content) for expectations available
+
 ## Linting
 
 ## Js

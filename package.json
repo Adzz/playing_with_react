@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "material-ui": "^0.17.4",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-tap-event-plugin": "^2.0.1"
   },
   "devDependencies": {
     "autoprefixer": "6.7.2",
@@ -21,6 +23,7 @@
     "css-loader": "0.26.1",
     "detect-port": "1.1.0",
     "dotenv": "2.0.0",
+    "enzyme": "^2.8.2",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-config-react-app": "^0.6.2",
@@ -40,6 +43,7 @@
     "postcss-loader": "1.2.2",
     "promise": "7.1.1",
     "react-dev-utils": "^0.5.2",
+    "react-test-renderer": "^15.5.4",
     "style-loader": "0.13.1",
     "stylelint-config-suitcss": "^11.0.0",
     "stylelint-selector-bem-pattern": "^1.0.0",
@@ -79,14 +83,12 @@
     ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
-    }
+    },
+    "verbose": true
   },
   "babel": {
     "presets": [
       "react-app"
     ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   }
 }
