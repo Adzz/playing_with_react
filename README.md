@@ -4,17 +4,56 @@
 
 ## Testing
 
-jest config is defined in package json under the `"jest": ` key.
+We use [jest](https://facebook.github.io/jest/) to provide unit tests. Config is defined in package json under the `"jest": ` key.
 
-[check here](https://facebook.github.io/jest/docs/expect.html#content) for expectations available
+[check here](https://facebook.github.io/jest/docs/expect.html#content) for expectations available.
+
+### NB
+
+When testing a container, you must `export default` the connect funtion as usual, but you must also `export` the class. Please see [here](https://github.com/reactjs/react-redux/issues/119). This throws an es-lint error, so we have disabled that.
+
+
+### Strategy
+
+The current testing strategy is outlined below. In general we want to avoid testing implementation details to avoid flakey and brittle tests.
+
+ The linter enforces the use of PropTypes, which can be seen in each component like so:
+  ```js
+    Component.propTypes = {
+      options: PropTypes.arrayOf(PropTypes.object).isRequired,
+    }
+  ```
+We just define the types of each of the props we will use upfront. The linter is a good guide too.
+
+Ensure that each component we buid will render without errors. To do this we can use [enzyme](https://github.com/airbnb/enzyme) to [shallow](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md) mount our component, and ensure there are no errors. Each subcomponenet should have their own similar test.
+
+Test important callbacks are triggered within a component on particular actions. We can use spies or
+
+Ensure that our actions and reducers are tested.
+
+These are good general [guidlines](https://medium.com/javascript-inside/some-thoughts-on-testing-react-redux-applications-8571fbc1b78f) to follow:
+  - component test to verify that the component actually renders.
+  - Avoid verifying tags or class names.
+  - Verify important callbacks or props, but keep it minimal.
+  - The need to test logic inside a component might signal the need for refactoring.
+
 
 ## Linting
+
+## Text Editor
+
+You'll want to set your text editor up with linting to save you some pain, so you can fix issues as they happen.
 
 ## Js
 
 JavaScript/JSX/React is linted with [ES Lint](http://eslint.org/). We should aim to follow [Airbnb's styleguide](https://github.com/airbnb/javascript/tree/master/react) as we implement their [eslint config](https://www.npmjs.com/package/eslint-config-airbnb). We can add files to exclude form linting in the `.eslintignore`. The npm scrip `js-lint` runs with the `--fix` flag, which has a limited ability to fix some of the linting issues automatically.
 
 ### CSS
+
+#### For now styles have to be defined inline on each component. This wont be permamnent, as Material UI have better solutions upcoming. Please see discussion [here](https://github.com/callemall/material-ui/issues/4066) and the docs [here](http://www.material-ui.com/#/customization/styles). Until then, common style components like colors and fonts can be found in `styles/colors.js`. These are included in out [theme](docs/material_ui.md).
+
+When we can implement without nasty `!important` hacks I reccommend we use Sass in the way described below.
+Linters are still set up ready to go:
 
 SCSS/CSS is linted with [Stylelint](https://github.com/stylelint/stylelint). We use the SuitCSS naming convention and the linter should be configured to help with this.
 

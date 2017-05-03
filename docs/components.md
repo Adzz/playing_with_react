@@ -6,9 +6,13 @@
 
 The front-end follows a component-based architecture. Every part of the website can be worked on in isolation, safe in the knowledge that it can be developed, tested and used without impacting on any other part of the website. We use [Material Design](https://material.io/guidelines/) with components provided by [Material UI](http://www.material-ui.com/#/). There are some quirks to this approach that are explained later.
 
+Material UI doesn't come with a grid system. This isn't neccessarily needed as each component should be responsible for it's own rendering. That is to say for the component to be truly portable, it should come with it's own media queries. [This](https://mydevice.io/devices/) might help you know which devices you are targeting.
+
 ## Themes
 
-Material UI requires a theme be provided. There's something around testing we need to be awar of. TO BE UPDATED
+Material UI requires a [theme](http://www.material-ui.com/#/get-started/usage) See how we customise it [here](../docs/material_ui.md).
+
+There's something around testing we need to be awar of. TO BE UPDATED
 
 ## Directory structure
 
@@ -19,15 +23,11 @@ Each component should follow a similar directory structure:
   +---/[group]
   |    +-- /ComponentName
   |    |    |-- ComponentName.jsx
-  |    |    |-- ComponentName-spec.js
+  |    |    |-- ComponentName.spec.js
   |    |    |-- ComponentName.scss
   |    |    |-- ComponentReducer.js
-  |    |    |-- ComponentReducer.test.js
   |    |    |-- ComponentActions.js
-  |    |    |-- ComponentActions.test.js
-  |    |    +-- demo/
-  |    |    |    |--
-  |    |    |    |-- TBC
+  |    |    |-- ComponentActions.spec.js
 
 ```
 
