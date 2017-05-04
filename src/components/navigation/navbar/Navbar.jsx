@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Radium from 'radium';
 import { Link } from 'react-router-dom';
 import NavigationMenuIcon from 'material-ui/svg-icons/navigation/menu';
 import MenuItem from 'material-ui/MenuItem';
@@ -9,7 +10,7 @@ import { white, steelBlue } from '../../../styles/colors';
 
 injectTapEventPlugin();
 
-export default class Navbar extends Component {
+export class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -75,3 +76,4 @@ export default class Navbar extends Component {
   }
 }
 
+export default Radium(Navbar);
