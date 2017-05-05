@@ -1,8 +1,8 @@
 import React from 'react';
 import Radium from 'radium';
 
-const BrandAndSuppliersHome = () => (
+const SeasonsHome = () => (
   <div>Coming Soon!</div>
 );
 
-export default Radium(BrandAndSuppliersHome);
+export default Radium(SeasonsHome);

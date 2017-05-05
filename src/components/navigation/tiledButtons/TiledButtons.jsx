@@ -53,7 +53,7 @@ export class TiledButtons extends Component {
             label={button.title}
             style={styles.button}
             secondary
-            containerElement={<Link to={`${this.props.basePath.url}/${button.linkTo}`} style={styles.link} />}
+            containerElement={<Link to={`${this.props.match.url}/${button.linkTo}`} style={styles.link} />}
           />
         ))}
       </div>
@@ -62,7 +62,7 @@ export class TiledButtons extends Component {
 }
 
 TiledButtons.propTypes = {
-  basePath: PropTypes.shape({
+  match: PropTypes.shape({
     path: PropTypes.string,
     url: PropTypes.string,
     isExact: PropTypes.bool,

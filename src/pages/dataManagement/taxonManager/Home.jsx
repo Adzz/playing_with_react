@@ -1,8 +1,8 @@
 import React from 'react';
 import Radium from 'radium';
 
-const BrandAndSuppliersHome = () => (
+const TaxonManagerHome = () => (
   <div>Coming Soon!</div>
 );
 
-export default Radium(BrandAndSuppliersHome);
+export default Radium(TaxonManagerHome);
