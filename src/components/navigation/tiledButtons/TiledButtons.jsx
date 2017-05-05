@@ -9,15 +9,18 @@ const styles = {
     flexFlow: 'row wrap',
     alignItems: 'center',
     alignContent: 'center',
-    width: '40vw',
-    height: '100%',
+    maxWidth: '50vw',
+    height: '70vh',
     lineHeight: '100px',
     margin: '0 auto',
+    overflow: 'scroll',
+    flex: '1 0 auto',
   },
   button: {
     height: '100px',
-    width: '200px',
     margin: '10px',
+    flex: '1 0 auto',
+    minWidth: '200px',
   },
   link: {
     textDecoration: 'none',
@@ -35,7 +38,7 @@ export class TiledButtons extends Component {
         { id: 3, title: 'Taxon Manager', linkTo: 'taxon_manager' },
         { id: 4, title: 'Surfdome Sizes', linkTo: 'surfdome_sizes' },
         { id: 5, title: 'Size Mapping', linkTo: 'size_mapping' },
-        { id: 6, title: 'One More Button', linkTo: 'one_more_button' },
+        { id: 6, title: 'Colours', linkTo: 'colours' },
       ],
     };
   }
