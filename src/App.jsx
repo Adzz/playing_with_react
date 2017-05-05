@@ -8,12 +8,11 @@ const App = () => (
   <BrowserRouter>
     <div>
       <Navbar />
-      <BrowserRouter basename="/data_management" >
-        <Route
-          path="/"
-          component={DataManagementHome}
-        />
-      </BrowserRouter>
+      <Route
+        path="/data_management"
+        exactly
+        component={DataManagementHome}
+      />
     </div>
   </BrowserRouter>
 );

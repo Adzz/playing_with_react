@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import { Link } from 'react-router-dom';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -52,12 +53,21 @@ export class TiledButtons extends Component {
             label={button.title}
             style={styles.button}
             secondary
-            containerElement={<Link to={`/${button.linkTo}`} style={styles.link} />}
+            containerElement={<Link to={`${this.props.basePath.url}/${button.linkTo}`} style={styles.link} />}
           />
         ))}
       </div>
     );
   }
 }
+
+TiledButtons.propTypes = {
+  basePath: PropTypes.shape({
+    path: PropTypes.string,
+    url: PropTypes.string,
+    isExact: PropTypes.bool,
+    params: PropTypes.object,
+  }).isRequired,
+};
 
 export default Radium(TiledButtons);
