@@ -13,7 +13,7 @@ const styles = {
   },
 };
 
-const DataManagementHome = ({ match }) => (
+export const DataManagementHome = ({ match }) => (
   <div style={styles.container}>
     <TiledButtons match={match} />
   </div>

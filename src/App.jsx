@@ -29,7 +29,7 @@ const App = () => (
           component={SurfdomeSizesHome}
         />
         <Route
-          path="/data_management/seasons"
+          path="/data_management/colours"
           component={ColoursHome}
         />
         <Route

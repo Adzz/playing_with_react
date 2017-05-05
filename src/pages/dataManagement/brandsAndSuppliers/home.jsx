@@ -1,8 +1,11 @@
 import React from 'react';
 import Radium from 'radium';
+import Breadcrumb from '../../../components/navigation/breadcrumb/Breadcrumb';
 
 const BrandAndSuppliersHome = () => (
-  <div>Coming Soon!</div>
+  <div>
+    <Breadcrumb location={location} />
+  </div>
 );
 
 export default Radium(BrandAndSuppliersHome);
