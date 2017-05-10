@@ -65,10 +65,15 @@ export class Navbar extends Component {
             >
               {this.renderMenuItems()}
             </Drawer>
-            <ToolbarTitle
-              text={this.state.selectedOption.title}
-              style={{ color: white, margin: '0 auto' }}
-            />
+            <Link
+              to={`/${this.state.selectedOption.slug}`}
+              style={{ textDecoration: 'none', margin: '0 auto' }}
+            >
+              <ToolbarTitle
+                text={this.state.selectedOption.title}
+                style={{ color: white }}
+              />
+            </Link>
           </ToolbarGroup>
         </Toolbar>
       </div>

@@ -5,6 +5,7 @@ import { TiledButtons } from './TiledButtons';
 
 describe('<TiledButtons />', () => {
   it('renders the navbar', () => {
-    shallow(<TiledButtons />);
+    const match = { match: { url: '/test_url' } };
+    shallow(<TiledButtons match={match} />);
   });
 });
