@@ -1,3 +1,5 @@
+This is the first app I built in React. Ultimately it was never used, but I learn a huge amount playing with it and so wanted to preserve the work.
+
 ## Deployment
 
 ## Local Development
