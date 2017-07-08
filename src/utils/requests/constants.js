@@ -1,0 +1,7 @@
+export const GET_REQ_LOADED = 'GET_REQ_LOADED';
+export const GET_REQUEST = 'GET_REQUEST';
+export const RESET_REDIRECT = 'RESET_REDIRECT';
+export const POST_REQUEST = 'POST_REQUEST';
+export const SUCCESSFUL_POST = 'SUCCESSFUL_POST';
+export const PUT_REQUEST = 'PUT_REQUEST';
+export const SUCCESSFUL_PUT = 'SUCCESSFUL_PUT';

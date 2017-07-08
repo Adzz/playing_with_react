@@ -10,12 +10,22 @@ import ColoursHome from './pages/dataManagement/colours/Home';
 import SurfdomeSizesHome from './pages/dataManagement/surfdomeSizes/Home';
 import SizeMappingHome from './pages/dataManagement/sizeMapping/Home';
 import TaxonManagerHome from './pages/dataManagement/taxonManager/Home';
+import AddBrand from './pages/dataManagement/brandsAndSuppliers/Add';
+import ShowBrand from './pages/dataManagement/brandsAndSuppliers/Show';
 
 const App = () => (
   <BrowserRouter>
     <div>
       <Navbar />
       <Switch>
+        <Route
+          path="/data_management/brands_and_suppliers/brands/:id"
+          component={ShowBrand}
+        />
+        <Route
+          path="/data_management/brands_and_suppliers/add_brand"
+          component={AddBrand}
+        />
         <Route
           path="/data_management/taxon_manager"
           component={TaxonManagerHome}

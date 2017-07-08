@@ -1,10 +1,9 @@
+import { grey100, grey500 } from 'material-ui/styles/colors';
 import { fullBlack,
           white,
           darkGrey,
           deepBlue,
           steelBlue,
-          lightTeal,
-          fadedTeal,
           clayRed,
           happyPink } from '../styles/colors';
 
@@ -16,8 +15,8 @@ export default {
     primary2Color: deepBlue,
     primary3Color: clayRed,
     accent1Color: happyPink,
-    accent2Color: lightTeal,
-    accent3Color: fadedTeal,
+    accent2Color: grey100,
+    accent3Color: grey500,
     canvasColor: white,
     borderColor: darkGrey,
     pickerHeaderColor: steelBlue,

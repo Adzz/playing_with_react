@@ -5,10 +5,7 @@ import NavigationMenuIcon from 'material-ui/svg-icons/navigation/menu';
 import MenuItem from 'material-ui/MenuItem';
 import { Toolbar, ToolbarTitle, ToolbarGroup } from 'material-ui/Toolbar';
 import Drawer from 'material-ui/Drawer';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import { white, steelBlue } from '../../../styles/colors';
-
-injectTapEventPlugin();
 
 export class Navbar extends Component {
   constructor(props) {
