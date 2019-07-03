@@ -1,8 +1,13 @@
-This is the first app I built in React. Ultimately it was never used, but I learn a huge amount playing with it and so wanted to preserve the work.
-
 ## Deployment
 
 ## Local Development
+
+Just run `npm install` to install the dependencies. `npm start` to boot the server.
+
+## API Calls
+
+We are using [saga](https://github.com/redux-saga/redux-saga) to handle our asynchornus API calls. [This](https://hashnode.com/post/what-are-the-benefits-of-redux-thunk-over-redux-saga-what-pros-and-cons-do-they-have-over-each-other-ciqvyydh7065w3g53ffalif61) is a good article to start, by comparing wth [thunks](). Sagas also use ES6 generators, so get familiar with them first too.
+
 
 ## Testing
 
@@ -31,7 +36,9 @@ Ensure that each component we buid will render without errors. To do this we can
 
 Test important callbacks are triggered within a component on particular actions. We can use spies or
 
-Ensure that our actions and reducers are tested.
+Ensure that our actions and reducers are tested. It's fine to test the action creators with out reducers
+
+Sagas are a breeze to test, so we can usually test them in isolation.
 
 These are good general [guidlines](https://medium.com/javascript-inside/some-thoughts-on-testing-react-redux-applications-8571fbc1b78f) to follow:
   - component test to verify that the component actually renders.

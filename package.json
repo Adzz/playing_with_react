@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.1",
     "enzyme": "^2.8.2",
     "lodash": "^4.17.4",
     "material-ui": "^0.17.4",
@@ -15,7 +16,9 @@
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-tap-event-plugin": "^2.0.1",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^0.15.3"
   },
   "devDependencies": {
     "autoprefixer": "6.7.2",
@@ -56,6 +59,7 @@
     "react-addons-test-utils": "^15.5.1",
     "react-dev-utils": "^0.5.2",
     "react-test-renderer": "^15.5.4",
+    "redux-devtools": "^3.4.0",
     "style-loader": "0.13.1",
     "stylelint-config-suitcss": "^11.0.0",
     "stylelint-selector-bem-pattern": "^1.0.0",
